@@ -1,0 +1,28 @@
+// header 样式
+@headerHeigh: 64px;
+
+.header {
+    background-color: #f8f8f8;
+
+    @searchIconWidth: 36px;
+    
+    .searchGroup {
+        height: @headerHeigh;
+        padding: 15px 10px;
+        position: relative;
+    }
+    .searchIcon {
+        display: inline-block;
+        width: @searchIconWidth;
+        height: @headerHeigh;
+        text-align: center;
+        line-height: @headerHeigh;
+        position: absolute;
+        top: 0;
+        left: 11px;
+        // background-color: #fff;
+    }
+    .searchInput {
+        padding-left: @searchIconWidth;
+    }
+}

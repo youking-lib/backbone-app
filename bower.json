@@ -1,0 +1,29 @@
+{
+  "name": "webapp",
+  "description": "webapp with backbone",
+  "main": "index.js",
+  "authors": [
+    "whistlemm <276158636@qq.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webapp"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Public/vender",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "modernizr": "2.7.1",
+    "requirejs": "^2.2.0",
+    "backbone": "^1.3.3",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

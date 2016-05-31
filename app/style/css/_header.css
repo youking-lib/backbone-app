@@ -1,0 +1,21 @@
+.header {
+  background-color: #f8f8f8;
+}
+.header .searchGroup {
+  height: 64px;
+  padding: 15px 10px;
+  position: relative;
+}
+.header .searchIcon {
+  display: inline-block;
+  width: 36px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+  position: absolute;
+  top: 0;
+  left: 11px;
+}
+.header .searchInput {
+  padding-left: 36px;
+}
