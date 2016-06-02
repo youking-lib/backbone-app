@@ -5409,13 +5409,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid #dddddd;
 }
 .nav-tabs > li {
+  width: 50%;
+  text-align: center;
   float: left;
   margin-bottom: -1px;
 }
 .nav-tabs > li > a {
   margin-right: 2px;
   line-height: 1.42857143;
-  border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
@@ -5426,8 +5427,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555555;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-bottom-color: transparent;
+  border-bottom: 2px solid #fe8134;
   cursor: default;
 }
 .nav-tabs.nav-justified {
@@ -6389,12 +6389,8 @@ a.badge:focus {
 }
 .thumbnail {
   display: block;
-  padding: 4px;
-  margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
@@ -6410,8 +6406,46 @@ a.thumbnail.active {
   border-color: #337ab7;
 }
 .thumbnail .caption {
-  padding: 9px;
+  width: 100%;
   color: #333333;
+}
+.rankList .thumbnail {
+  position: relative;
+}
+.rankList .thumbnail .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.articleList .thumbnail {
+  padding: 4px;
+  position: relative;
+}
+.articleList .thumbnail img {
+  float: left;
+  width: 2.16rem;
+  height: 1.34rem;
+}
+.articleList .thumbnail .caption {
+  width: auto;
+  float: left;
+  padding-left: 0.2rem;
+}
+.articleList .thumbnail .caption .title {
+  width: 4rem;
+  font-size: 0.3rem;
+  margin-top: 0.05rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.articleList .thumbnail .caption .like {
+  position: absolute;
+  bottom: 0.1rem;
+}
+.articleList .thumbnail .caption .like .num {
+  margin-left: 0.05rem;
 }
 .alert {
   padding: 15px;
@@ -8151,4 +8185,17 @@ button.close {
 }
 .header .searchInput {
   padding-left: 36px;
+}
+.homeBox li {
+  list-style: none;
+}
+.homeBox .rankList {
+  margin-bottom: 0;
+}
+.homeBox .rankList .caption {
+  color: #fff;
+  font-size: 10px;
+}
+.homeBox .rankList img {
+  width: 100%;
 }

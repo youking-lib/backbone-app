@@ -5,3 +5,4 @@ test/temp
 app/vender
 .tmp
 test/bower_components/
+.DS_Store

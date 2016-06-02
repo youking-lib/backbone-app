@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>App</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="app/style/main.css">
@@ -17,12 +17,12 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!-- <header class="container-full header">
-        <div class="form-group searchGroup">
-            <p class="searchIcon"><span class="fa fa-search"></span></p>
-            <input type="text" placeholder="请输入商户名、分类、地点" class="form-control searchInput">
-        </div>
-    </header> -->
+    <!-- <section class="homeBox">
+
+    </section> -->
+    <div class="main">
+        
+    </div>
     <script data-main="app/main.js" src="app/vender/requirejs/require.js"></script>
     <script>
         require.config({
@@ -30,7 +30,8 @@
             paths: {
                 'jQuery': 'vender/jquery/dist/jquery',
                 'underscore': 'vender/underscore/underscore',
-                'Backbone': 'vender/backbone/backbone'
+                'Backbone': 'vender/backbone/backbone',
+                'bootstrap': 'vender/bootstrap/dist/js/bootstrap'
             },
             shim: {
                 'jQuery': {
@@ -42,6 +43,9 @@
                 'Backbone': {
                     deps: ['jQuery', 'underscore'],
                     exports: 'Backbone'
+                },
+                'bootstrap': {
+                    deps: ['jQuery']
                 }
             }
         });

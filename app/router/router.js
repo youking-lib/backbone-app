@@ -1,4 +1,4 @@
-define(['Backbone', 'view/homeview'], function(Backbone, HomeView){
+define(['Backbone', 'view/homeView'], function(Backbone, HomeView){
 
     var Router = Backbone.Router.extend({
         routes: {

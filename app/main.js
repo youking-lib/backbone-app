@@ -1,4 +1,7 @@
-define(['Backbone', 'router/router'], function(Backbone, Router){
+define(['Backbone', 'router/router','js/domcontentrecale', 'bootstrap'], function(Backbone, Router, recaleC){
+
+    var recale = new recaleC;
+    recale.init();
     // /* 商店模型 */
     // var ShopModel = Backbone.Model.extend({
     //     defaults: {
