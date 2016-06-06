@@ -1,4 +1,4 @@
-define(['Backbone', 'view/articalListView', 'collection/articalCollection', 'tpl/tabTpl'], function(Backbone, articalListView, articalCollection, tabTpl){
+define(['Backbone', 'view/articalListView', 'collection/articleCollection', 'tpl/tabTpl'], function(Backbone, articalListView, articalCollection, tabTpl){
 
     var HotShopView = Backbone.View.extend({
         tagName: 'section',

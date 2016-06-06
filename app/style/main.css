@@ -8199,3 +8199,35 @@ button.close {
 .homeBox .rankList img {
   width: 100%;
 }
+.articleDetail .thumbnail .banner {
+  width: 100%;
+  position: relative;
+}
+.articleDetail .thumbnail .banner > img {
+  width: 100%;
+  height: 3.46rem;
+  display: block;
+}
+.articleDetail .thumbnail .banner .starBtn {
+  position: absolute;
+  bottom: 0.15rem;
+  left: 0.15rem;
+  display: block;
+  width: 1.3rem;
+  height: 0.46rem;
+  border-radius: 0.2rem;
+  background-color: #000;
+  opacity: 0.5;
+  color: #fff;
+  line-height: 0.46rem;
+  text-align: center;
+}
+.articleDetail .thumbnail .banner .starBtn span.fa {
+  margin-right: 0.1rem;
+}
+.articleDetail .thumbnail .caption {
+  padding: 0.4rem 0.3rem;
+}
+.articleDetail .thumbnail .caption .title {
+  margin: 0 0 0.23rem;
+}
