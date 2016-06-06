@@ -6,10 +6,7 @@ define(['Backbone', 'tpl/articleDetailTpl'], function(Backbone, articleDetailTpl
         },
         render: function(articleId){
             var model = this.collection.get(articleId);
-            console.log(model.toJSON());
-
             this.$el.html(this.template(model.toJSON()));
-            // this.collection.where({});
         }
     }));
 });

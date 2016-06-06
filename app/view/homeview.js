@@ -18,11 +18,10 @@ define(['Backbone', 'view/hotshopView', 'tpl/headerTpl', 'tpl/rankListTpl', 'tpl
     // ];
 
     var HomeView = Backbone.View.extend({
-        tagName: 'section',
-        className: 'homeBox',
+        el: '.main',
+        template: '<section class="homeBox">' + headerTpl + rankListTpl + '</section>',
         render: function(){
-            this.$el.append(headerTpl + rankListTpl);
-            $('.main').append(this.$el);
+            this.$el.html(this.template);
             var hotShopView = new HotShopView({collection: articleCollection});
             $('.homeBox').append(hotShopView.render().$el);
         }

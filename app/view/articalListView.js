@@ -8,7 +8,6 @@ define(['Backbone', 'tpl/articleListTpl'], function(Backbone, articleListTpl){
         //     this.model = model;
         // },
         render: function(){
-            console.log(this.model);
             this.$el.html(this.template(this.model.toJSON()));
             return this;
         }
