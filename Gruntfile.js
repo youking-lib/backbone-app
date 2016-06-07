@@ -46,7 +46,7 @@ module.exports = function(grunt){
             },
             main: {
                 files: {
-                    'src/main.js': ['app/main.js']
+                    'test/main.js': ['app/main.js']
                 }
             }
         },
