@@ -1,2 +1,2 @@
-/*! webapp - v1.0.0 - 2016-05-31 */
-define(["Backbone"],function(a){var b=a.Model.extend({defaults:{num:0,name:""}}),c=a.Collection.extend({model:b}),d=[{num:1,name:"振华超市"},{num:2,name:"二餐"}],e=new c(d),f=a.Router.extend({routes:{"":"home","/list":"list"},initialize:function(){this.collection=e,this.homeView=new g({collection:e})},home:function(){}}),g=a.View.extend({template:_.template('<div class="container text-success"><%= name %></div>'),initialize:function(){console.log("homeView")},render:function(){_.each(this.collection.models,function(a){console.log(a),this.$el.append(this.template(a.toJSON()))},this),$("body").html(this.$el)}});new f;a.history.start()});
+/*! webapp - v1.0.0 - 2016-06-08 */
+define(["Backbone","router/router","js/domcontentrecale","bootstrap"],function(a,b,c){var d=new c;d.init();new b;a.history.start()});
