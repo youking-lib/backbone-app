@@ -4,82 +4,116 @@
 
 // Mixin and adjust the regular image class
 .thumbnail {
-  display: block;
-  // padding: @thumbnail-padding;
-  // margin-bottom: @line-height-computed;
-  line-height: @line-height-base;
-  background-color: @thumbnail-bg;
-  // border: 1px solid @thumbnail-border;
-  // border-radius: @thumbnail-border-radius;
-  .transition(border .2s ease-in-out);
+	display: block;
+	// padding: @thumbnail-padding;
+	// margin-bottom: @line-height-computed;
+	line-height: @line-height-base;
+	background-color: @thumbnail-bg;
+	// border: 1px solid @thumbnail-border;
+	// border-radius: @thumbnail-border-radius;
+	.transition(border .2s ease-in-out);
 
-  
-  > img,
-  a > img {
-    &:extend(.img-responsive);
-    margin-left: auto;
-    margin-right: auto;
-  }
+	
+	> img,
+	a > img {
+		&:extend(.img-responsive);
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  // Add a hover state for linked versions only
-  a&:hover,
-  a&:focus,
-  a&.active {
-    border-color: @link-color;
-  }
+	// Add a hover state for linked versions only
+	a&:hover,
+	a&:focus,
+	a&.active {
+		border-color: @link-color;
+	}
 
-  // Image captions
-  .caption {
-    width: 100%;
-    color: @thumbnail-caption-color;
-  }
+	// Image captions
+	.caption {
+		width: 100%;
+		color: @thumbnail-caption-color;
+	}
 }
 
 // 排行榜
 .rankList .thumbnail {
-  position: relative;
+	position: relative;
 
-  .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-  }  
+	.caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	}  
 }
 
 // 商家推荐
-.articleList {
-  .thumbnail{
-    padding: @thumbnail-padding;
-    position: relative;
+.homeBox {
+	.thumbnail{
+		padding: @thumbnail-padding;
+		position: relative;
 
-    img {
-      float: left;
-      width: 2.16rem;
-      height: 1.34rem;
-    }
+		img {
+			float: left;
+			width: 2.16rem;
+			height: 1.34rem;
+		}
 
-    .caption {
-      width: auto;
-      float: left;
-      padding-left: 0.2rem;
+		.caption {
+			width: auto;
+			float: left;
+			padding-left: 0.2rem;
 
-      .title {
-        width: 4rem;
-        font-size: 0.3rem;
-        margin-top: 0.05rem;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-      .like {
-        position: absolute;
-        bottom: 0.1rem;
+			.title {
+				width: 4rem;
+				font-size: 0.3rem;
+				margin-top: 0.05rem;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			.like {
+				position: absolute;
+				bottom: 0.1rem;
 
-        .num {
-          margin-left: 0.05rem;
-        }
-      }
-    }
-  }
+				.num {
+					margin-left: 0.05rem;
+				}
+			}
+		}
+	}
+}
+
+.userNotePanel {
+	.thumbnail {
+		img {
+			float: left;
+			width: 0.8rem;
+			height: 0.8rem;
+		}
+	}
+
+	.caption {
+		width: auto;
+		float: left;
+		padding-left: 0.2rem;
+
+		.title {
+			width: 4rem;
+			font-size: 0.3rem;
+			margin-bottom: 0.1rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			color: #808080;
+
+			a {
+				font-weight: bolder;
+				color: #344e83;
+			}
+		}
+		.date {
+			color: #cfcfcf;
+		}
+	}
 }

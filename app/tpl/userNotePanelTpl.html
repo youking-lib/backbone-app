@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="thumbnail clearfix">
+            <img class="img-circle" src="<%= data.cuser.image %>" alt="">
+            <div class="caption">
+                <div class="title"><a href=""><%= data.cuser.username %></a>看过</div>
+                <div class="date"><%= data.date %></div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="quote">
+             <span class="fa fa-video-camera"></span><%= data.target %>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="summary">
+            <%= data.commonet %>
+        </div>
+        <div class="container">
+            <button class="pull-right btn btn-default"><span class="fa fa-thumbs-o-up"></span></button>
+            <button class="pull-right btn btn-default"><span class="fa fa-envelope"></span></button>
+        </div>
+    </div>
+</div>

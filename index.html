@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="public/style/main.css">
+    <link rel="stylesheet" href="app/style/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="public/vender/modernizr/modernizr.js"></script>
+    <script src="app/vender/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 </head>
 <body>
@@ -23,14 +23,15 @@
     <div class="main">
         
     </div>
-    <script data-main="public/main.js" src="public/vender/requirejs/require.js"></script>
+    <script data-main="app/main.js" src="app/vender/requirejs/require.js"></script>
     <script>
         require.config({
-            baseUrl: 'public/',
+            baseUrl: 'app/',
             paths: {
                 'jQuery': 'vender/jquery/dist/jquery',
                 'underscore': 'vender/underscore/underscore',
                 'Backbone': 'vender/backbone/backbone',
+                'text': 'vender/text/text',
                 'bootstrap': 'vender/bootstrap/dist/js/bootstrap'
             },
             shim: {

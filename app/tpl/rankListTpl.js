@@ -10,7 +10,7 @@ define(function(){
                         <li class="col-xs-4">\
                             <div class="thumbnail">\
                                 <a href="">\
-                                    <img src="./public/images/list_img.jpg" alt="...">\
+                                    <img src="./app/images/list_img.jpg" alt="...">\
                                 </a>\
                                 <div class="caption">\
                                     <span>最土豪</span>\
@@ -20,7 +20,7 @@ define(function(){
                         <li class="col-xs-4">\
                             <div class="thumbnail">\
                                 <a href="">\
-                                    <img src="./public/images/list_img.jpg" alt="...">\
+                                    <img src="./app/images/list_img.jpg" alt="...">\
                                 </a>\
                                 <div class="caption">\
                                     <span>食神推荐</span>\
@@ -30,7 +30,7 @@ define(function(){
                         <li class="col-xs-4">\
                             <div class="thumbnail">\
                                 <a href="">\
-                                    <img src="./public/images/list_img.jpg" alt="...">\
+                                    <img src="./app/images/list_img.jpg" alt="...">\
                                 </a>\
                                 <div class="caption">\
                                     <span>最最最</span>\

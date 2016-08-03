@@ -56,6 +56,16 @@ module.exports = function(grunt){
                     'app/style/main.css': 'app/style/less/_main.less'
                 }
             }
+        },
+        browserSync: {
+            bsFiles: {
+                src : 'app/**/*'
+            },
+            options: {
+                server: {
+                    baseDir: "./"
+                }
+            }
         }
 
     });
@@ -63,6 +73,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['copy', 'uglify', 'less']);
+    grunt.registerTask('default', ['copy', 'uglify', 'less', 'browserSync']);
 }
