@@ -1,14 +1,12 @@
-define(['Backbone', 'text!tpl/userNotePanelTpl.html'], function(Backbone, userNotePanelTpl){
+define(['Backbone', 'text!tpl/thumbnail.html'], function(Backbone, thumbnailTpl){
     return Backbone.View.extend({
-        tagName: 'section',
-        className: 'userNotePanel',
-        template: _.template(userNotePanelTpl),
+        template: _.template(thumbnailTpl),
         initialize: function(model){
             this.model = model;
         },
         render: function(){
             this.$el.html(this.template({
-                data: this.model.toJSON()
+                model: this.model.toJSON()
             }));
             return this;
         }

@@ -1,7 +1,7 @@
-define(['Backbone', 'view/common/tabBarView'], function(Backbone, tabBarView){
+define(['Backbone', 'view/common/tabBarView', 'text!tpl/userCenter.html'], function(Backbone, tabBarView, userCenterTpl){
     return Backbone.View.extend({
         el: '.main',
-        template: '<section class="userBox"></section>',
+        template: _.template(userCenterTpl),
         initialize: function(){
             this.tabBarView = new tabBarView('user');
         },
@@ -10,7 +10,6 @@ define(['Backbone', 'view/common/tabBarView'], function(Backbone, tabBarView){
             this.$el.append(this.tabBarView.render().$el);
 
             var $userBox = $('.userBox');
-            $userBox.html('我的')
         }
     });
 });

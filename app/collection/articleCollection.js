@@ -5,6 +5,12 @@ define(['Backbone', 'model/articalModel'], function(Backbone, articalModel){
 
     var Collection = Backbone.Collection.extend({
         model: articalModel,
+        search: function(reg){
+            return this.filter(function(model){
+                var title = model.get('title');
+                return reg.test(title);
+            });
+        }
     });
 
     var hotShopList = [

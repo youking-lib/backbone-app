@@ -1,4 +1,4 @@
-define(['Backbone', 'view/homeView', 'view/articleView', 'view/friendView', 'view/userView', 'collection/articleCollection'], function(Backbone, HomeView, ArticleView, friendView, userView, articleCollection){
+define(['Backbone', 'view/homeView', 'view/articleView', 'view/friendView', 'view/userView', 'view/searchResult', 'collection/articleCollection'], function(Backbone, HomeView, ArticleView, friendView, userView, searchResultView, articleCollection){
 
     var Router = Backbone.Router.extend({
         routes: {
@@ -6,7 +6,8 @@ define(['Backbone', 'view/homeView', 'view/articleView', 'view/friendView', 'vie
             'index': 'home',
             'article/:articleId': 'article',
             'friend': 'friend',
-            'user': 'user'
+            'user': 'user',
+            'search/:result': 'searchResult'
         },
         initialize: function(){
             // 首页视图
@@ -17,6 +18,7 @@ define(['Backbone', 'view/homeView', 'view/articleView', 'view/friendView', 'vie
             this.friendView = new friendView;
             // 个人中心视图
             this.userView = new userView;
+            
         },
         home: function(){
             this.homeView.render();
@@ -29,6 +31,10 @@ define(['Backbone', 'view/homeView', 'view/articleView', 'view/friendView', 'vie
         },
         user: function(){
             this.userView.render();
+        },
+        searchResult: function(key){
+            var resultView = new searchResultView(key);
+            resultView.render();
         }
     });
     

@@ -32,6 +32,5 @@ define(function(){
                         <% }) %>\
                     </div>\
                 <% }) %>\
-                <div role="tabpanel" class="tab-pane" id="hotBuyGroup">热门团购精选</div>\
             </div>';
 })

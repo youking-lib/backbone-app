@@ -10,6 +10,9 @@ define(['Backbone', 'view/hotshopView', 'view/common/searchBar', 'view/component
 
             var tabConfig = this.getTabConfig();
             this.tabComponentView = new tabComponent(tabConfig);
+
+            // 监听 搜索栏 搜索事件
+            // this.listenTo(this.searchBarView, 'doSearch', this.handleSearch);
         },
         render: function(){
             this.$el.html(this.template);
@@ -43,7 +46,31 @@ define(['Backbone', 'view/hotshopView', 'view/common/searchBar', 'view/component
                 ],
             };
             return config;
-        }
+        },
+        // handleSearch: function(result){
+        //     if(result.length){
+
+        //         this.rankListView.remove();
+        //         this.tabComponentView.remove();
+
+        //         this.renderSearchResult(result);
+
+        //     }else {
+
+        //         alert('没有找到！')
+        //     }
+        // },
+        // renderSearchResult: function(result){
+
+        //     result.forEach(function(model, i){
+        //         console.log(model);
+        //         var thumbnailComponentView = new thumbnailComponent(model);
+        //         var $homeBox = $('.homeBox');
+
+        //         $homeBox.append(thumbnailComponentView.render().$el);
+
+        //     }, this);
+        // }
     });
     return HomeView;
 

@@ -1,0 +1,95 @@
+.centerBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.userBox {
+    background-color: #f5f5f5;
+
+    .header {
+        height: 2.88rem;
+        width: 100%;
+        background-color: #f68a42;
+        position: relative;
+
+        .user {
+            width: 2rem;
+            height: 2rem;
+            font-size: 0.25rem;
+            font-weight: bolder;
+            color: #fff;
+            text-align: center;
+
+            .centerBox();
+
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+                border: 0.05rem solid #fff;
+            }
+            span {
+                margin-top: 0.2rem;
+                display: inline-block;
+            }
+
+        }
+
+    }
+    .tab {
+        height: 1.3rem;
+
+        > div {
+            height: 1.3rem;
+            background-color: #de7c3c;
+            padding: 0;
+            position: relative;
+
+            &:first-child:after {
+                border-right: 1px dashed #fff;
+                height: 0.7rem;
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+            }
+        }
+        .tab-list {
+            width: 100%;
+            height: 1rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            line-height: 1rem;
+            text-align: center;
+            overflow: hidden;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.3rem;
+
+            .fa {
+                font-size: 0.7rem;
+                vertical-align: middle;
+                margin-right: 0.2rem;
+            }
+
+        }
+    }
+
+    .list {
+        margin-bottom: 0.4rem;
+        font-size: 0.3rem;
+
+        .fa {
+            color: #979797;
+            margin-right: 0.3rem;
+        }
+    }
+}
