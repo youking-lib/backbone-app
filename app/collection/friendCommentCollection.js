@@ -1,6 +1,21 @@
 define(['Backbone', 'model/commentModel'], function(Backbone, commentModel){
     var Collection = Backbone.Collection.extend({
-        model: commentModel
+        model: commentModel,
+        url: './api/comments',
+        parse: function(response){
+            return response;
+        },
+        getComments: function(callback){
+            this.fetch({
+                reset: true,
+                success: function(){
+                    callback.apply(this, arguments);
+                },
+                error: function(){
+                    console.log(arguments)
+                }
+            })
+        }
     });
 
     var data = [
@@ -58,5 +73,5 @@ define(['Backbone', 'model/commentModel'], function(Backbone, commentModel){
         },
     ];
 
-    return new Collection(data);
+    return Collection;
 });

@@ -8,25 +8,32 @@ define(['Backbone', 'view/hotshopView', 'view/common/searchBar', 'view/component
             this.rankListView = new rankListView;
             this.tabBarView = new tabBarView;
 
-            var tabConfig = this.getTabConfig();
-            this.tabComponentView = new tabComponent(tabConfig);
 
             // 监听 搜索栏 搜索事件
             // this.listenTo(this.searchBarView, 'doSearch', this.handleSearch);
         },
         render: function(){
+            var self = this;
+
             this.$el.html(this.template);
             var $homeBox = $('.homeBox');
             // 顶部搜索条
             $homeBox.append(this.searchBarView.render().$el);
             // 排行榜组件
             $homeBox.append(this.rankListView.render().$el);
+            
+            var articles = new articleCollection();
+            // 获取文章数据，回调中渲染视图
+            articles.getArticles(function(collection){
+                var tabConfig = self.getTabConfig(collection);
+                self.tabComponentView = new tabComponent(tabConfig);
+                $homeBox.append(self.tabComponentView.render().$el);
+            })
             // tab组件
-            $homeBox.append(this.tabComponentView.render().$el);
             // 底部tabBar
             $homeBox.append(this.tabBarView.render().$el);
         },
-        getTabConfig: function(){
+        getTabConfig: function(articleCollection){
             var config = {};
             config.hotShopList = {
                 title: '热门商家推荐',
@@ -46,7 +53,7 @@ define(['Backbone', 'view/hotshopView', 'view/common/searchBar', 'view/component
                 ],
             };
             return config;
-        },
+        }
         // handleSearch: function(result){
         //     if(result.length){
 

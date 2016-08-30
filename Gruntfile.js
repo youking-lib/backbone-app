@@ -25,12 +25,6 @@ module.exports = function(grunt){
                         expand: true, cwd: 'app/vender/font-awesome/', src: ['fonts/*'], dest: 'app/'
                     }
                 ]
-            },
-            web: {
-                files: [
-                    {expand: true, cwd: 'app', src: ['**/*', '!style/less/**', '!style/css/**'], dest: 'web/public/'},
-                    {expand: true, src: ['./index.html'], dest: 'web/'}
-                ]
             }
             // seajs: {
             //     files:[ 

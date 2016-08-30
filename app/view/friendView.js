@@ -8,15 +8,21 @@ define(['Backbone', 'view/common/tabBarView', 'view/component/userNoteComponent'
             // this.userNoteComponent = new userNoteComponent;
         },
         render: function(){
+            var self = this;
+
             this.$el.html(this.template);
             this.$el.append(this.tabBarView.render().$el);
 
             var $friendBox = $('.friendBox');
             // 渲染note列表
-            friendCommentCollection.forEach(function(model, i){
-                var noteItemView = new userNoteComponent(model);
-                $friendBox.append(noteItemView.render().$el)
-            }, this);
+            var comments = new friendCommentCollection();
+            comments.getComments(function(collection){
+                collection.forEach(function(model, i){
+                    var noteItemView = new userNoteComponent(model);
+                    $friendBox.append(noteItemView.render().$el)
+
+                });
+            });
             
         }
     });
